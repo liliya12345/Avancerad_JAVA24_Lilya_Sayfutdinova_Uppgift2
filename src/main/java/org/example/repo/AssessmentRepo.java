@@ -46,7 +46,7 @@ public class AssessmentRepo {
         }
         return listOfAssessment;
     }
-
+// metod som sparar data om betyg
     public void saveAssessment(Assessment assessment) {
         try (FileWriter fileWriter = new FileWriter("src/main/resources/assessment.txt",true)) {
             String out= assessment.getId()+";"+assessment.getSubject()+";"+assessment.getMark()+";"+assessment.getStudentId();
@@ -57,7 +57,7 @@ public class AssessmentRepo {
             throw new RuntimeException(e);
         }
     }
-
+//metod som letar  efter  betyg med student Id
     public List<Assessment> findAssessmentByStudentId(int studentId) {
         return findAllAssessment().stream().filter(assessment -> assessment.getStudentId()==studentId).toList();
     }

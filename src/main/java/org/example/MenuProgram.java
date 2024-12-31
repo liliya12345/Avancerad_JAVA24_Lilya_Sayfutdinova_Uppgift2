@@ -2,7 +2,7 @@ package org.example;
 
 public class MenuProgram {
 
-
+// Metod som visar menu options
 
         public void menuProgram() {
             System.out.println("****MENU*******");
